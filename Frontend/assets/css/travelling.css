@@ -1,0 +1,290 @@
+
+       .bgmain
+       {
+           width: 800px;
+           border: 1px solid #008000;
+           background:#c7ed7c;
+           border-radius:8px;
+       }
+       .head
+       {
+           width:100%; 
+           padding:3px; 
+           border-radius:8px; 
+           background :#f8f9d9;
+       }
+       .headline
+       {
+           width:60px;
+            border-radius:8px; 
+           padding-left:1px;
+           font-weight: 700;
+           font-family: sans-serif;
+           font-size: 10pt;
+       }
+       .maincontent
+       {
+           width:100%;
+           background:#f9f8d9;
+           margin-top:5px;
+           border-radius:8px;
+       }
+       .intro
+       {
+           width: 100%;
+           border: 1px solid #c7ed7c;
+           border-radius:8px;
+            background:#999966;
+            height:248px;
+          font-family: 'Segoe UI';
+          padding-left:3px;
+          
+       }
+        .fset
+       {
+         border-radius:8px;
+         text-align:left;
+         height:230px;
+          background-color:#f9f8d9;
+           border:solid 1px #c7ed7c;
+          width:180px;
+       }
+        .fsetproject
+       {
+         border-radius:8px;
+         text-align:left;
+         height:75px;
+          background-color:#f9f8d9;
+          border-color :#c7ed7c;
+          border:1px solid;
+         
+       }
+       .fsetonline
+       {
+         border-radius:8px;
+         text-align:left;
+         height:180px;
+          background-color:#f9f8d9;
+          border:solid 1px #c7ed7c;
+       }
+        .fsetkey
+       {
+           text-decoration:none;
+       }
+         .fset_graph
+       {
+           border-radius:8px;
+         text-align:left;
+           background:#f9f8d9;
+          border:solid 1px #c7ed7c;
+         width:100%px;
+         margin-top:10px;
+          animation:move1 5s infinite;
+         -webkit-animation:move1 5s infinite;  
+        
+   }
+   .fset_graph td
+   {
+       font-family:Verdana;
+       font-size:12px;
+       font-weight:bold;
+       color:brown;
+       text-align:center;  
+       
+   }
+  
+       @-webkit-keyframes move1
+    {
+        0% 
+        {
+        color:#FFC822; left:0px;
+        }
+        50% 
+        {
+           color:#f9f8d9; left:5px;
+            }
+            %100
+            {
+                color:#fffae8;
+            }
+    }
+       
+      @keyframes move1
+    {
+        0% 
+        {
+       color:#FFC822; left:0px;
+        }
+        50% 
+        {
+          color:#f9f8d9; left:5px;
+            }
+            %100
+            {
+                color:#fffae8;
+            }
+    }
+       
+       
+       .fsetgalery
+       {
+         border-radius:8px;
+         text-align:left;
+         
+          background-color:#f9f8d9;
+          border-color :#c7ed7c;
+          border:1px solid;
+          width:180px;
+       }
+        .fsetservices
+       {
+         border-radius:8px;
+         text-align:left;
+         height:205px;
+          background-color:#f9f8d9;
+          border:solid 1px #c7ed7c;
+          width:auto;
+       }
+        .fsetoffice
+       {
+         border-radius:8px;
+         text-align:left;
+         height:240px;
+          background-color:#f9f8d9;
+          border:solid 1px #c7ed7c;
+          width:180px;
+          margin-top:10px
+       }
+      .legnmock
+      {
+           border-radius:8px;
+         background: #a5ce27;
+ background: -moz-linear-gradient(#a5ce27 0%, #709400 100%);
+ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a5ce27), color-stop(100%, #709400));
+ background: -webkit-linear-gradient(#a5ce27 0%, #709400 100%);
+ background: linear-gradient(#a5ce27 0%, #709400 100%);
+           width:75%;
+           font-weight:bold;
+           font-family:Sans-Serif;
+           font-size:12px;
+           text-indent:10px;
+           height:20px;
+           vertical-align:middle;
+          
+      }
+        .fsetnews
+       {
+         border-radius:8px;
+         text-align:left;
+         height:180px;
+          background:#f9f8d9;
+          border:solid 1px #c7ed7c;
+          width:400px;
+       }
+       .fsetnews .news
+       {
+          width:375px;
+       }
+       
+         .fsetnews td
+         {
+       
+             border:0px;
+             font-family:Verdana;
+             font-size:12px;
+           font-weight:bold;
+           background:#f9f8d9; 
+         }
+           .legn
+       {
+           border-radius:8px;
+          background: #a5ce27;
+ background: -moz-linear-gradient(#a5ce27 0%, #709400 100%);
+ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a5ce27), color-stop(100%, #709400));
+ background: -webkit-linear-gradient(#a5ce27 0%, #709400 100%);
+ background: linear-gradient(#a5ce27 0%, #709400 100%);
+           width:45%;
+           font-family:Sans-Serif;
+           font-size:12px;
+           text-align:left;
+           font-weight:bold;
+            height:20px;
+            text-indent:10px;
+       }
+        .fset_project
+       {
+           border-radius:8px;
+         text-align:left;
+           background:#f9f8d9;
+          border:solid 1px #c7ed7c;
+         width:100%px;
+   }
+   
+ 
+       .style6 a
+       {
+           text-decoration:none;
+           color:#FFFFCC;
+       }
+       .style9
+       {
+           
+       }
+       .style10
+       {
+           border-radius: 8px;
+           padding-left: 1px;
+           font-weight: 700;
+           font-family: sans-serif;
+           font-size: 10pt;
+       }
+       .style15
+       {
+           color: #996600;
+       }
+       #more
+       {
+           width:50px;
+           border: solid 1px #ffffcc;
+           border-radius:8px;
+           text-align:center;
+           float:right;          
+           
+           
+       }
+       .site-link
+{
+   Font-Size:small;
+   font-weight:bold;
+   text-decoration:none;
+   color:Black;
+     }
+     .top_menu
+     {
+      font:verdana;   
+     }
+     
+      .cssmenutab4
+{
+   
+            font-size: 8px;
+            font-family:verdana;
+            text-indent :8px;
+ display: block;
+ color: #595959;
+  line-height:1.2;
+ background: #fffae8;
+ background: -moz-linear-gradient(#fffab9 0%, #fffae8 100%);
+ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fffae8), color-stop(100%, #fffab9));
+ background: -webkit-linear-gradient(#fffab9 0%, #fffae8 100%);
+ background: linear-gradient(#fffab9 0%, #fffae8 100%);
+
+ -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ border-radius: 4px;	
+  border: 1px solid;
+  border-color:#336600
+ 
+}
+       </style>
+      

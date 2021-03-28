@@ -1,0 +1,45 @@
+body{
+    background-color: #;
+}
+section .content a,
+section .content input{
+    background-color: #f0f0f0;
+}
+section .content h2{
+    color: #face3c;
+}
+.navbar{
+    background-color: #6F2232 !important;
+}
+.container-style{
+    background-color: #950740 !important;  
+}
+.sidebar{
+    background-color: #E3073F;
+}
+
+
+.h2{
+    color: #950740;
+}
+
+.panel-body{
+    text-decoration: black;
+
+    color: black;
+    font-size:20px;
+
+}
+.navbar-brand{
+    margin-top:1%;
+}
+
+a:link{
+    text-decoration: none;
+    color: inherit;
+}
+a:hover(
+    color:green;
+)
+
+

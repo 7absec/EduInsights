@@ -1,0 +1,783 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Courses</title>
+    <link href="assets/courses/css/style1.css" rel="stylesheet" type="text/css" />
+    <style>
+    a{display:inline-block; color:#333; cursor:pointer; transition:all .2s;}
+    a:hover{cursor:pointer; color:#348fd6; text-decoration:none;}   
+    
+    h1.tooltip {position: relative;cursor: pointer;}   
+    h1.tooltip:hover span {opacity: 1;visibility: visible;}
+    h1.tooltip span{padding: 10px;top: 40px;left:112px;min-width: 75px;max-width: 430px;background-color: #000000;color: #FFFFFF;height: auto;border-radius: 5px;opacity: 0;position: absolute;visibility: hidden;word-wrap: break-word;font-size: 12px;z-index: 10000;
+    -webkit-transition: all 0.5s;-moz-transition: all 0.5s;-ms-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;
+    } 
+    .logo1{float:left; margin-left:-10px; position:relative; z-index:89;}
+    header{box-shadow:0px 0px 13px rgba(0, 0 ,0, .2);}
+
+    .breadcrumb{font-size:12px; padding:10px 0;}
+    .breadcrumb li{display:inline-block;}
+    .breadcrumb li a{color:#999; text-decoration:none;}  
+    .breadcrumb li a:hover{color:#348fd6;}
+    .breadcrumb>li+li:before{color:#b7b7b7; padding:0 5px; content:"/\00a0";}  
+
+    .button a, .button, button.btn{display:inline-block; color:#fff; cursor:pointer; text-decoration:none; font-size:14px; padding:7px 15px 8px; border:0; border-radius:2px; background:#fd6c73; transition:all .2s;}
+    .button a:hover, .button:hover, button.btn:hover, .addmissionBlock a:hover{background:#e2575e;}
+   
+@media screen and (min-width:1025px){
+    
+    nav .subLink li > a:hover{cursor:pointer;}  
+
+    header{box-shadow:0px 0px 13px rgba(0, 0 ,0, .2);}  
+    .cafPage header{box-shadow:none;} 
+	header .dataContent{position:relative; padding-left:15px; padding-right:15px;}
+    header .searchContent{height:62vh;box-shadow: 0px 3px 4px rgba(0, 0 ,0, .1)}    
+    header .searchContent hr{margin: 0 -35px;opacity: 0.1;margin-top: 30px;}
+	header .close{right:26px; top:30px;display: none;}  
+	.overflowHide header .container > .search{opacity:1;} 
+	header .dataContent{height:100%; background:#fff;}
+	.overflowHide{padding-right:15px}
+	header .searchContent h4{font-size:20px;font-weight: 500;} 
+	nav{padding:5px 55px 0 0; text-align:right; position:relative;}
+    button.menu{display:none}
+
+	/* --- NAVIGATION start --- */
+	nav a{color:#999; text-decoration:none;}
+	nav .more-links a{ color:#333; text-decoration:none;}
+	nav > ul > li{display:inline-block;}
+    nav li.first{float:right; margin:12px 0 0;}
+    nav > ul > li.first{margin-left:15px;}
+    nav li.first .userPhoto, nav li.first .userName, nav li.first .close{display:none;}
+    nav li.first.userLogin{height:56px; position:relative;} 
+    nav li.first.userLogin .login{display:none;}
+    nav li.first.userLogin .userPhoto{display:block; width:40px;cursor: pointer;} 
+    nav li.first.userLogin .userPhoto svg{width:100%; height:auto;} 
+    nav li.first.userLogin:hover .userName{display:block;} 
+    nav li.first.userLogin .userName{top:56px; width:228px; text-align:center; left:-128px; padding:6px;} 
+    nav li.first .userName *{display:block; color:#333; padding:5px 14px; border-top:0;} 
+    nav li.first .userName p{margin-bottom: 0;font-weight: bold;padding:0;} 
+    nav li.first .userName a.e-mail{color:#348fd6;word-break: break-word;} 
+    nav li.first .userName a.signout-btn{display: inline-block;margin-bottom: 10px;margin-top: 6px;color:#fd6c73; cursor:pointer;padding: 6px 15px;font-size: 15px; border-radius:3px; background:#fff;border:1px solid #fd6c73;}
+    nav li.first .userName a:hover.signout-btn{color:#fd6c73;}     
+    nav li.first .userName > :first-child{border-top:0;color: #999;}   
+	nav .login button{color:#fd6c73; cursor:pointer; padding:12px 15px; font-size:15px; border:0; border-radius:3px; background:#fff;border:1px solid #fd6c73;} 
+    nav .login button:hover{color: #fd6c73;}   
+    nav li.sub-links > .more-links{position:relative;}
+	nav li.sub-links > .more-links:after{content:""; position:absolute; right:17px; top:50%; margin-top:-4px; border:solid #333; border-width:0 1px 1px 0; padding:3px; transform:rotate(45deg); -webkit-transform:rotate(45deg); transition:all .2s;}
+	nav > ul > li > .more-links{padding:24px 35px 24px 10px;}
+    nav ul ul{display:flex; flex-wrap:wrap; flex-direction:column; text-align:left; transition:all .3s;}  
+
+    nav ul> li > ul, nav li.userLogin .userName{position:absolute; left:0; top:75px; right:0; font-size:15px; background:#fff; border-top:1px solid #e8e8e8; box-shadow:0 5px 10px rgba(0, 0, 0, .1); z-index:-1;}
+	nav > ul > li > ul{display:none; visibility:hidden; opacity:0; webkit-transition:opacity 0.3s linear, visibility 0.2s linear; -moz-transition:opacity 0.2s linear, visibility 0.2s linear; -o-transition: opacity 0.2s linear, visibility 0.2s linear; transition:opacity 0.2s linear, visibility 0.2s linear;}
+	nav > ul> li:hover > ul{display:block; visibility:visible; opacity: 1; z-index:88;}	 
+	nav ul ul.four-column{ flex-direction:row;}
+
+    nav ul ul li > .more-links{float:left; color:#fff; width:280px; cursor:pointer; padding:5px 20px 5px 25px; background:#3aa6a7; position:relative;}
+    nav ul ul li > .more-links.firstLink{padding-top:13px;}
+    nav ul ul li > .more-links.lastLink{padding-bottom:13px;}
+	nav li:hover > .more-links, nav ul ul li.active >.more-links{cursor:pointer; font-weight:600;}
+	nav ul ul li.active >.more-links:after{content:""; position:absolute; right:-6px; top:12px; width:0; height:0; border-top:7px solid transparent; border-left:6px solid #3aa6a7; border-bottom:7px solid transparent; z-index:95;}
+    nav ul ul li > .more-links.firstLink:after{top:18px;}
+    nav ul li > ul > li{clear:both;}
+	nav ul ul ul{left:280px; top:0; border-top:0; padding:20px 0 0 0; box-shadow:none; font-size:14px; flex-direction:row; opacity:0; visibility:hidden;}
+	nav li .heading, nav li .title{font-weight:600;}
+    nav li .heading a, nav li .title a{color:#333;}
+    nav li .heading a:hover, nav li .title a:hover{color:#348fd6;}
+	nav .view-all{margin:10px 0; font-size:12px; text-transform:uppercase;}
+	nav .full-col .view-all{margin-top:0;}
+	nav .view-all a, nav a:hover, nav li .heading a:hover, nav .more-links a:hover, nav li .title:hover{color:#348fd6;}
+	nav ul ul ul > li{display:inline-block; width:33.33%; vertical-align:top; padding:0 0 0 25px;}
+    nav ul ul ul > li.full-col{display:block; width:100%;}
+    nav ul ul .active > ul, nav ul ul .active > ul ul, nav ul ul.four-column ul{opacity:1; visibility:visible; z-index:89;}
+	nav ul ul .active > ul{display:flex; flex-wrap:wrap;}
+	nav ul ul ul ul{position:static; display:block;  padding:7px 0 20px;}
+	nav ul ul ul ul li{display:block; width:100%; padding:8px 0;}
+
+    nav .four-column li.full-col.back, nav ul ul ul li.back, nav ul ul ul li.go-back{display:none;}
+
+	nav .four-column{padding:10px;}
+	nav li:hover ul.four-column{display:flex; flex-wrap:wrap;}
+	nav .four-column li{display:inline-block; width:25%; padding:10px 15px; vertical-align:top;}
+	nav .four-column li.first{padding-bottom:0; padding-top:0;}
+	nav .four-column li.last{padding-top:0;}
+	nav .four-column li.full-col{display:block; width:100%;}
+	nav .four-column .image{margin:0 0 10px; height:120px; overflow:hidden;}
+	nav .four-column .title{margin:0 0 10px;}
+	nav .four-column li.full-col .heading{margin:0;}
+	nav .four-column li ul{display:block; position:static; padding:0;}
+    nav .four-column li ul li{display:block; width:100%; padding:5px 0;}  
+    nav .four-column li ul li a b{font-size: 15px;color: #333;}  
+    nav .bg{display:none;}
+    nav .four-column .allLatestUpdates{margin:0; text-align:center;}
+    nav .four-column .allLatestUpdates a{display:inline-block; color:#fd6c73; padding:7px 15px; border-radius:3px; border:1px solid #fd6c73; transition:all .3s;}
+    nav .four-column .allLatestUpdates a:hover{color:#fff; background:#fd6c73;}
+
+	/* --- NAVIGATION end --- */  
+
+} 
+     
+    @media (max-width: 1024px){
+    .logo1{margin-left:50px;}      
+    } 
+    @media (max-width: 640px){ 
+    .breadcrumb > li + li:before{padding:0 1px;}
+    } 
+
+    @media screen and (max-width:480px){ 
+    .breadcrumb{font-size:12px;overflow-x:auto; white-space:nowrap;} 
+    }
+    @media screen and (max-width:480px){ 
+    .breadcrumb{font-size:12px;}
+    }
+    @media (max-width: 420px){  
+    .logo1{width: 146px;}   
+    } 
+    </style>
+    </head>
+    <body>
+        <div class="corona-top"><div class="container">
+    </div><!-- SEARCH CONTENT end --></div></header><div class="body"><div class="container mt-15"><div class="adsBlock"><div id='div-gpt-ad-1607939649435-0' ></div></div></div><div class="header courseHeader"><!-- HEADER start --><div class="container"><ul class="breadcrumb"><li><a href="Home.html">Home</a></li></ul><h1>List of Courses in India
+            
+            </h1></div></div><div class="wrapper examListingPage"><div class="container"><aside class="col-md-3 sidebar left-col"><!-- SIDEBAR start --><!--/START LEFT SIDE BAR --><button type="button" class="filterBtn" data-toggle="modal" data-target="#filtersModal"><svg version="1.1" fill="#fff" id="filterIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 485.008 485.008" style="enable-background:new 0 0 485.008 485.008;" xml:space="preserve"><g><g><path d="M171.501,464.698v-237.9l-166.3-192.6c-8.9-10.9-7.9-33.3,15.1-33.3h443.6c21.6,0,26.6,19.8,15.1,33.3l-162.3,187.5v147.2
+                        c0,6-2,11.1-7.1,15.1l-103.8,95.8C193.801,488.698,171.501,483.898,171.501,464.698z M64.701,41.298l142.2,164.3c3,4,5,8.1,5,13.1
+                        v200.6l64.5-58.5v-146.1c0-5,2-9.1,5-13.1l138.1-160.3L64.701,41.298L64.701,41.298z"/></g></g></svg></button><div id="filtersModal" class="fade modal" role="dialog"><div class="modal-dialog edit-modal-dialog"><div class="modal-content edit-modal-content"><div class="modal-header edit-modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">Select Filters</h4></div><div class="modal-body edit-modal-body" id="filtersModalBody"></div><div class="modal-footer edit-modal-footer"><div class="bottom_btn"><button type="button" id="cancel" name="reset" value="Clear All" class=""
+                                    onclick="location.reload()"> Reset All
+                            </button><button type="button" id="submit_filters" name="reset" value="Apply Filters" data-dismiss="modal" class=""
+                                    > Apply <span id="applied_filters_count"></span></button></div></div></div></div><!--/END LEFT SIDE BAR --></div></aside><!-- SIDEBAR end --><div class="listing-content rightside"><div class="schoolBlock" id="course_list_wrapper"><h2 >Total <span id="course_count">15</span> Courses</h2><div class="box course_list" data-mode="Regular" data-duration="4 Years"><h2><a href="#" title="B.Tech - Biochemical Engineering"> B.Tech - Biochemical Engineering</a></h2><div class="coursebtn"></div><div class="content"><div class="coursePic"><a href="#" title="B.Tech - Biochemical Engineering"><img src="assets/courses/Images/1.jpg" alt="B.Tech - Biochemical Engineering"></a></div><ul class="attr_box"><li>Average Duration <span>
+                                
+                                    
+                                    
+                                    4 years
+                                      
+                                    
+                                </span></li><li>Average Fees<span>
+                                 
+                                   
+                                   
+                                    50 K-1.5 L  INR
+                                   
+                                   </span></li></ul><p><p>B.Tech in Biochemical Engineering is a programme that covers various subjects related to the chemical process, production and development ...</p></p><a href="#" class="readbtn">View Details</a><div class="clear"></div></div></div><div class="box course_list" data-mode="Regular" data-duration="4 Years"><h2><a href="/courses/engineering-bachelor-of-technology-b-tech-textile-engineering-ug/" title="B.Tech - Textile Engineering"> B.Tech - Textile Engineering</a></h2><div class="coursebtn"></div><div class="content"><div class="coursePic"><a href="#" title="B.Tech - Textile Engineering"><img src="assets/courses/Images/2.jpg" alt="B.Tech - Textile Engineering"></a></div><ul class="attr_box"><li>Average Duration <span>
+                                
+                                    
+                                    
+                                    4 years
+                                      
+                                    
+                                </span></li><li>Average Fees<span>
+                                 
+                                   
+                                   
+                                    40 K-1.5 L  INR
+                                   
+                                   </span></li></ul><p><p>Bachelor in Textile Engineering is an undergraduate degree programme that mainly deals with the technology, production, and processes associated with ...</p></p><a href="#" class="readbtn">View Details</a><div class="clear"></div></div></div><div class="box course_list" data-mode="Regular" data-duration="4 Years"><h2><a href="#" title="B.Tech - Ceramic Engineering"> B.Tech - Ceramic Engineering</a></h2><div class="coursebtn"></div><div class="content"><div class="coursePic"><a href="#" title="B.Tech - Ceramic Engineering"><img src="assets/courses/Images/3.jpg" alt="B.Tech - Ceramic Engineering"></a></div><ul class="attr_box"><li>Average Duration <span>
+                                
+                                    
+                                    
+                                    4 years
+                                      
+                                    
+                                </span></li><li>Average Fees<span>
+                                 
+                                   
+                                   
+                                    40 K-1.2 L  INR
+                                   
+                                   </span></li></ul><p><p>B.Tech in Ceramic Engineering is amongst the new engineering specializations that cover the production and manufacturing of ceramic products ...</p></p><a href="#" class="readbtn">View Details</a><div class="clear"></div></div></div><div class="box course_list" data-mode="Regular" data-duration="4 Years"><h2><a href="#" title="B.Tech - Instrumentation Engineering"> B.Tech - Instrumentation Engineering</a></h2><div class="coursebtn"></div><div class="content"><div class="coursePic"><a href="#" title="B.Tech - Instrumentation Engineering"><img src="assets/courses/Images/4.jpg" alt="B.Tech - Instrumentation Engineering"></a></div><ul class="attr_box"><li>Average Duration <span>
+                                
+                                    
+                                    
+                                    4 years
+                                      
+                                    
+                                </span></li><li>Average Fees<span>
+                                 
+                                   
+                                   
+                                    45 K-1.5 L  INR
+                                   
+                                   </span></li></ul><p><p>B.Tech in Instrumentation Engineering is considered to be one of the most sophisticated branches of engineering. It deals majorly ...</p></p><a href="#" class="readbtn">View Details</a><div class="clear"></div></div></div><div class="box course_list" data-mode="Regular" data-duration="4 Years"><h2><a href="#" title="B.Tech - Mechatronics Engineering"> B.Tech - Mechatronics Engineering</a></h2><div class="coursebtn"><a href="javascript:void(0)" class="course_follow" data-course_id="6">Follow</a></div><div class="content"><div class="coursePic"><a href="#" title="B.Tech - Mechatronics Engineering"><img src="assets/courses/Images/5.jpg" alt="B.Tech - Mechatronics Engineering"></a></div><ul class="attr_box"><li>Average Duration <span>
+                                
+                                    
+                                    
+                                    4 years
+                                      
+                                    
+                                </span></li><li>Average Fees<span>
+                                 
+                                   
+                                   
+                                    50 K-1.5 L  INR
+                                   
+                                   </span></li></ul><p><p>B.Tech in Mechatronics Engineering is a diverse branch of engineering covering various engineering fields such as mechanics, electronics, computers ...</p></p><a href="#" class="readbtn">View Details</a><div class="clear"></div></div></div><div class="box course_list" data-mode="Regular" data-duration="4 Years"><h2><a href="#" title="B.Tech - Telecommunication Engineering"> B.Tech - Telecommunication Engineering</a></h2><div class="coursebtn"></div><div class="content"><div class="coursePic"><a href="#" title="B.Tech - Telecommunication Engineering"><img src="assets/courses/Images/6.jpg" alt="B.Tech - Telecommunication Engineering"></a></div><ul class="attr_box"><li>Average Duration <span>
+                                
+                                    
+                                    
+                                    4 years
+                                      
+                                    
+                                </span></li><li>Average Fees<span>
+                                 
+                                   
+                                   
+                                    70 K-1.75 L  INR
+                                   
+                                   </span></li></ul><p><p>Telecommunication Engineering comprises the study of circuit design along with strategic mass developments. It also covers a major portion of ...</p></p><a href="#" class="readbtn">View Details</a><div class="clear"></div></div></div><div class="box course_list" data-mode="Regular" data-duration="4 Years"><h2><a href="#" title="B.Tech - Automobile Engineering"> B.Tech - Automobile Engineering</a></h2><div class="coursebtn"></div><div class="content"><div class="coursePic"><a href="#" title="B.Tech - Automobile Engineering"><img src="assets/courses/Images/7.jpg" alt="B.Tech - Automobile Engineering"></a></div><ul class="attr_box"><li>Average Duration <span>
+                                
+                                    
+                                    
+                                    4 years
+                                      
+                                    
+                                </span></li><li>Average Fees<span>
+                                 
+                                   
+                                   
+                                    40 K-1.5 L  INR
+                                   
+                                   </span></li></ul><p><p>Automobile Engineering is a combination of electrical, mechanical, electronics, safety and software engineering. B.Tech in Automobile Engineering is highly ...</p></p><a href="#" class="readbtn">View Details</a><div class="clear"></div></div></div><div class="box course_list" data-mode="Regular" data-duration="4 Years"><h2><a href="#" title="B.Tech - Production Engineering"> B.Tech - Production Engineering</a></h2><div class="coursebtn"><a href="javascript:void(0)" class="course_follow" data-course_id="9">Follow</a></div><div class="content"><div class="coursePic"><a href="#" title="B.Tech - Production Engineering"><img src="assets/courses/Images/8.jpg" alt="B.Tech - Production Engineering"></a></div><ul class="attr_box"><li>Average Duration <span>
+                                
+                                    
+                                    
+                                    4 years
+                                      
+                                    
+                                </span></li><li>Average Fees<span>
+                                 
+                                   
+                                   
+                                    60 K-1.3 L  INR
+                                   
+                                   </span></li></ul><p><p>B.Tech in Production Engineering is a programme designed for candidates who want to foray into technical management. This branch ...</p></p><a href="#" class="readbtn">View Details</a><div class="clear"></div></div></div><div class="box course_list" data-mode="Regular" data-duration="4 Years"><h2><a href="#" title="B.Tech - Mining Engineering"> B.Tech - Mining Engineering</a></h2><div class="coursebtn"></div><div class="content"><div class="coursePic"><a href="#" title="B.Tech - Mining Engineering"><img src="assets/courses/Images/9.jpg" alt="B.Tech - Mining Engineering"></a></div><ul class="attr_box"><li>Average Duration <span>
+                                
+                                    
+                                    
+                                    4 years
+                                      
+                                    
+                                </span></li><li>Average Fees<span>
+                                 
+                                   
+                                   
+                                    40 K-1 L  INR
+                                   
+                                   </span></li></ul><p><p>Mining engineering is the branch of engineering that deals with the practices, theories, technology, science and application of extraction and ...</p></p><a href="#" class="readbtn">View Details</a><div class="clear"></div></div></div><div class="box course_list" data-mode="Regular" data-duration="4 Years"><h2><a href="#" title="B.Tech - Genetic Engineering"> B.Tech - Genetic Engineering</a></h2><div class="coursebtn"></div><div class="content"><div class="coursePic"><a href="#" title="B.Tech - Genetic Engineering"><img src="assets/courses/Images/10.jpg" alt="B.Tech - Genetic Engineering"></a></div><ul class="attr_box"><li>Average Duration <span>
+                                
+                                    
+                                    
+                                    4 years
+                                      
+                                    
+                                </span></li><li>Average Fees<span>
+                                 
+                                   
+                                   
+                                    1 L-1.75 L  INR
+                                   
+                                   </span></li></ul><p><p>B.Tech in Genetic Engineering is one of the newest fields of engineering that is still being explored by researchers ...</p></p><a href="#" class="readbtn">View Details</a><div class="clear"></div></div></div><div class="box course_list" data-mode="Regular" data-duration="2 Years"><h2><a href="#" title="Masters of Computer Management"> Masters of Computer Management</a></h2><div class="coursebtn"></div><div class="content"><div class="coursePic"><a href="#" title="Masters of Computer Management"><img src="assets/courses/Images/11.jpg" alt="Masters of Computer Management"></a></div><ul class="attr_box"><li>Average Duration <span>
+                                
+                                    
+                                    
+                                    2 years
+                                      
+                                    
+                                </span></li><li>Average Fees<span>
+                                 
+                                   
+                                   
+                                    10 K-30 K  INR
+                                   
+                                   </span></li></ul><p><p>Masters of Computer Management or MCM is a two year post graduate programme that has been designed to impart skills ...</p></p><a href="#" class="readbtn">View Details</a><div class="clear"></div></div></div><div class="box course_list" data-mode="Regular" data-duration="2 Years"><h2><a href="#" title="Bachelor of Education"> Bachelor of Education</a></h2><div class="coursebtn"></div><div class="content"><div class="coursePic"><a href="#" title="Bachelor of Education"><img src="assets/courses/Images/12.jpg" alt="Bachelor of Education"></a></div><ul class="attr_box"><li>Average Duration <span>
+                                
+                                    
+                                    
+                                    2 years
+                                      
+                                    
+                                </span></li><li>Average Fees<span>
+                                 
+                                   
+                                   
+                                    15 K-40 K  INR
+                                   
+                                   </span></li></ul><p><p>Bachelors of Education, popularly referred as B.Ed., is a two-year full-time degree course that is essential for candidates who ...</p></p><a href="#" class="readbtn">View Details</a><div class="clear"></div></div></div><div class="box course_list" data-mode="Regular" data-duration="3 Years"><h2><a href="assets/courses/Images/13.jpg" title="Bachelor of Visual Communication"> Bachelor of Visual Communication</a></h2><div class="coursebtn"></div><div class="content"><div class="coursePic"><a href="#" title="Bachelor of Visual Communication"><img src="assets/courses/Images/13.jpg" alt="Bachelor of Visual Communication"></a></div><ul class="attr_box"><li>Average Duration <span>
+                                
+                                    
+                                    
+                                    3 years
+                                      
+                                    
+                                </span></li><li>Average Fees<span>
+                                 
+                                   
+                                   
+                                    10 K-30 K  INR
+                                   
+                                   </span></li></ul><p><p dir="ltr">The Bachelor of Visual Communication (BVC) is a popular 3-year undergraduate programme offered in the mass communication colleges in India ...</p></p><a href="#" class="readbtn">View Details</a><div class="clear"></div></div></div><div class="box course_list" data-mode="Regular" data-duration="4 Years"><h2><a href="#" title="Bachelor of Design"> Bachelor of Design</a></h2><div class="coursebtn"></div><div class="content"><div class="coursePic"><a href="#" title="Bachelor of Design"><img src="assets/courses/Images/14.jpg" alt="Bachelor of Design"></a></div><ul class="attr_box"><li>Average Duration <span>
+                                
+                                    
+                                    
+                                     3 years-4 years
+                                    
+                                </span></li><li>Average Fees<span>
+                                 
+                                   
+                                   
+                                    43 K-1.35 L  INR
+                                   
+                                   </span></li></ul><p><p>Bachelor of Design (B.Des) is a full-time four-year degree course (spread across eight semesters) which is offered by many ...</p></p><a href="#" class="readbtn">View Details</a><div class="clear"></div></div></div><div class="box course_list" data-mode="Regular" data-duration="3 Years"><h2><a href="#" title="Bachelor of Financial Markets"> Bachelor of Financial Markets</a></h2><div class="coursebtn"></div><div class="content"><div class="coursePic"><a href="#" title="Bachelor of Financial Markets"><img src="assets/courses/Images/15.jpg" alt="Bachelor of Financial Markets"></a></div><ul class="attr_box"><li>Average Duration <span>
+                                
+                                    
+                                    
+                                    3 years
+                                      
+                                    
+                                </span></li><li>Average Fees<span>
+                                 
+                                   
+                                   
+                                    50 K-1.25 L  INR
+                                   
+                                   </span></li></ul><p><p>Bachelor of Financial Markets&nbsp;(BFM) is a three-year undergraduate programme in management. The course offers theoretical and practical knowledge of ...</p></p><a href="#" class="readbtn">View Details</a></div></div></div></div><div class="clear"></div></div></div></div><div id="common_modal" class="modal fade in common_modal" role="dialog"><div class="modal-dialog"><!-- Modal content--><div class="modal-content"><div class="modal-header"><button type="button" class="close popup-close" data-dismiss="modal">&times;</button><h4 class="modal-title" id="common_modal_title">Details Saved</h4></div><div class="modal-body"><p id="common_moda_success_message"></p></div></div></div></div><div id="popup-body"></div>
+
+                                   <footer><div class="container"><div class="row"><div class="col-md-3 footer-links"><h4>Trending Links</h4><ul><li><a href="#">Engineering Colleges in India</a></li><li><a href="#">Top MBA colleges in India</a></li><li><a href="#">Top Law Colleges in India</a></li><li><a href="#">Top Medical Colleges in India</a></li><li><a href="#">Lovely Professional University</a></li><li><a href="#">CBSE 10th Date Sheet 2021</a></li><li><a href="#">List of B.Sc Courses</a></li><li><a href="#">B.Tech Courses</a></li><li><a href="#">MBA Courses</a></li><li><a href="#">Study Abroad UAE Site</a></li><li><a href="#">Medical Courses</a></li><li><a href="#">CBSE 12th Date Sheet 2021</a></li><li><a href="#">JEE Main Rank Predictor 2021</a></li><li><a href="#">JEE Main Marks Vs Percentile</a></li></ul></div><div class="col-md-3 footer-links"><h4>Most Viewed links</h4><ul><li><a href="#">Chandigarh University</a></li><li><a href="#">GATE Result 2021</a></li><li><a href="#">JEE Main March 2021 Question Paper</a></li><li><a href="#">JEE Main March 2021 Answer Key</a></li><li><a href="#">JEE Main Question Paper 2021</a></li><li><a href="#">UP Board 12th Date Sheet</a></li><li><a href="#">GATE Toppers 2021</a></li><li><a href="#">NEET 2021 Application Form</a></li><li><a href="#">JEE Main Admit Card</a></li><li><a href="#">NEET Syllabus 2021</a></li><li><a href="#">UP Board 10th Date Sheet</a></li><li><a href="#">JEE Main 2021</a></li><li><a href="#">NEET 2021 Exam Date</a></li><li><a href="#">JEE Main Result 2021</a></li></ul></div><div class="col-md-3 footer-links"><h4>Other Important Facilities</h4><ul><li><a href="#">Common Application Form</a></li><li><a href=" #">Q&A</a></li><li><a href=" #">Career Prediction Test</a></li><li><a href="#">Studyabroad</a></li><li><a href="#">Letsoh</a></li><li>School Connect</li></ul></div><div class="col-md-3 footer-links"><h4 class="footer-logo"></h4><ul><li class="footer-phone"><a >789456130</a></li><li class="footer-email"><a href="mailto:eduinsight.com">EduInsight.com</a></li></ul></div></div><div class="row"><div class="social-app-link"><div class="socials"></div></div></div><div class="row footer-link-block"><div class="col-md-7 col-sm-12"><div class="quickLinks"></div></div><div class="col-md-5 col-sm-12 copyRight">© 2021 EduInsights</div></div></div></footer><input type="hidden" id="csrf_token" value="lmoIbNsjx3qWSbZi44JDCEBvGiYCbKvs"><script type="text/javascript" src="https://static.collegedekho.com/static/js/responsive/lib.min.25e2cea0fc9d.js" charset="utf-8"></script><script defer type="text/javascript" src="https://static.collegedekho.com/static/js/responsive/common.min.e74a8d88bc0b.js" charset="utf-8"></script><script type="text/javascript">
+
+ 
+  /* MOBILE NAV Start */ 
+  $('.menu').click(function () {
+        $('nav ul').removeAttr("style");
+        $('.heading').removeClass("collaps");
+        $('nav ul').removeClass("second-level");
+        $('nav ul').removeClass("first-level");
+		$('nav ul').removeClass("first-level-data");
+        $(this).toggleClass("active");
+		$(this).parent().addClass("open");
+		$('nav > ul').toggleClass( "slide" );
+        $('body').toggleClass('overflowHide');
+        $('nav > .bg, nav button.close').on('click', function (){
+            $('nav ul ul.first-level').hide();
+            $('.menu').removeClass('active');
+            $('nav > ul').removeClass('slide');
+            $('nav ul').removeClass('first-level');
+			$('nav ul').removeClass('first-level-data');
+            $('nav').removeClass('open');
+            $('body').removeClass('overflowHide');
+			$('nav ul').removeAttr('style');
+        });		
+        $('.sub-links > .more-links').on('click', function (){  
+            $("nav ul").removeClass('first-level');
+            $(this).parents('ul').addClass('first-level');
+            $(this).siblings('ul').addClass('first-level-data');
+            var text_value = $(this).text();
+            $(this).siblings().children('.back').text(text_value);
+			var mainHeight = $('nav > ul > li > ul').height();		
+            $('.sub-links .first-level-data .more-links').on('click', function (){
+                $("nav ul.slide").addClass('second-level');
+                $(this).siblings('ul').addClass('second-level');
+				$(this).siblings('ul').css({'min-height': mainHeight});
+                var text_value_2 = $(this).text();
+                $(this).siblings().children('.go-back').text(text_value_2);
+                $(".second-level > li > div.heading").off().on('click', function(e) {  
+                    e.preventDefault();
+                    if(!$(this).hasClass('collaps')){
+                        $(this).next("ul").slideUp();
+                        $(this).addClass("collaps");
+                    }else{
+                        $(this).next("ul").slideDown();
+                        $(this).removeClass("collaps");
+                    }
+                });
+            });
+        });
+        
+        $('.back').on('click', function (){
+            $(this).parent('ul').removeClass('first-level-data');
+        });
+        $('.go-back').on('click', function (){
+            $(this).parents('ul').removeClass('second-level');
+        });
+    });
+    $('nav ul > li > ul > li > .more-links').hover(function(){
+		$(this).parent().siblings().removeClass("active");
+		$(this).parent().addClass("active");
+	});
+/* MOBILE NAV End */  
+
+
+  /* ----- SEARCH start ----- */
+   globalSearchClicked = false;
+    showGlobalSearch = function ()
+    {
+        globalSearchClicked = true;
+        $("#autocomplete").html("");
+        $('.searchContent').slideToggle(500);
+        
+        $("#site_search").focus();  
+
+    }
+
+    hideGlobalSearch = function ()
+    {
+        globalSearchClicked = false;
+        $("#autocomplete").html("");
+        $('.searchContent').slideUp(300);
+        $('body').removeClass('overflowHide');
+
+    }
+
+   $(document).click(function(event) 
+    {
+        if(!globalSearchClicked)
+        {
+          return;
+        }
+        if($(event.target).parents(".searchContent").length === 0) 
+        {
+            hideGlobalSearch();
+        }
+    });
+
+    $('.searchIcon').click(function (event) {
+         event.stopPropagation();
+         showGlobalSearch();
+
+    }); 
+
+    $('.searchContent .close').click(function() {
+        hideGlobalSearch();      
+    });
+   
+/* ----- SEARCH end ----- */
+
+
+
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+
+
+
+
+
+
+/*  ga events start by Sarfraz 20-07-2018 */
+
+
+$(document).ready(function(){
+
+    $(".gtm-submit-btn").click(function () {
+        ga('send', 'event', 'config lead submit', $(this).data('button-id'), 'submit', $(this).text());
+    });
+
+    $(".gtm-lead-click").click(function () {
+        var text = $.trim($(this).text());
+        pushTextInDataLayer(text);
+
+        ga('send', 'event', 'button config click', $(this).attr('id'), 'click', $(this).text());
+    });
+
+});
+/*  ga events end */
+
+
+function pushToGA(event, category, leadSubmitResponse, form_id, label)
+{
+  ga('send', event, leadSubmitResponse+'_'+form_id,label);
+}
+</script><script type="text/javascript" src="https://static.collegedekho.com/static/js/chatbot/init.9fc6f91e9f3f.js" defer></script><script type="text/javascript">
+ IsAuthenticated = false;
+ SignupURL = "?next="+"/courses/";
+function get_login_modal(button, qna_login)
+{
+    if(qna_login == true || button.parentNode.getAttribute('id')=="login")
+    {
+        url = "/accounts/login/?next="+"/courses/"
+        console.log(url)
+    }
+    else
+    {
+        url = "/accounts/signup/?next="+"/courses/"
+    }
+    $.ajax({
+        url:url,
+        type:"GET",
+        data:{},
+        success:function(data)
+        {
+            $('#popup-body').html(data)
+            if (!($(window).width() <= 767)){
+                var popupHeight = ($('.loginPage .wrapper').height())/2;
+                $('.loginPage .wrapper').css({"margin-top":'-' + popupHeight +'px'});
+            }
+            $('.loginPage .close').click(function(){
+                $('.loginPage').fadeOut(400);
+                setTimeout(function() {
+                    $(".loginPage .wrapper").removeAttr('style');
+                }, 1000);
+                $('.loginPage').remove();
+            });
+
+            if (url.indexOf('login') >= 0) {
+              $('#signUp').hide();
+              $('#signIn').show();
+            } else {
+              $('#signUp').show();
+              $('#signIn').hide();
+            }
+        },
+        error:function()
+        {
+        }
+    });
+}
+
+function ajax_submit_login(e)
+{
+    $("#loader").show()
+    e.preventDefault();
+    $.ajax(
+    {
+        url:"/accounts/login/",
+        type:"POST",
+        data:$("#login-form").serialize(),
+        success:function(response)
+        {
+            $("#loader").hide()
+            document.getElementById("loader").style.display = "none";
+            if(response.location && reloadOnLogin){
+                window.location.href = response.location    
+                window.location.reload(true);
+            }
+            else if (response.location && !reloadOnLogin){
+                $('.loginPage').fadeOut(400);
+                setTimeout(function() {
+                    $(".loginPage .wrapper").removeAttr('style');
+                }, 1000);
+                $('.loginPage').remove();
+                isLoggedIn = 1
+                $('#is-logged-in').val(1);
+
+            }
+            else if(response.html && response.form_errors){
+                $('body').append(response.html);
+            }
+        },
+        error:function(error)
+        {
+            $("#loader").hide()
+            $(".error").html('');
+            var err = JSON.parse(error.responseText)
+            //Object.keys(err['form_errors']).forEach(function(e){
+            //    $("#login-form > ul > li.last-li").before("<li class='error'>"+(err['form_errors'][e][0])+"</li>")});
+
+
+            Object.keys(err['form_errors']).forEach(function(e){
+                $("#login-form "+"."+e).after("<p class='error'>"+err['form_errors'][e]+"</p>");
+                })
+                if(err.form_errors['__all__'] != undefined){
+                $("#signIn .password").after('<p class="error">'+err.form_errors['__all__']+'</p>');
+        }
+
+
+        }
+    });
+}
+
+
+
+$(document).ready(function() {
+    if (window.location.href.indexOf("/users/user-profile/") > -1) {
+         $('.headerTitle').text('My Profile');
+    }
+    else if (window.location.href.indexOf("/users/user-exams/") > -1){
+        $('.headerTitle').text('My Exams');
+    }
+    else if(window.location.href.indexOf("/users/user-feed/") > -1)
+    {
+        $('.headerTitle').text('My Feed');
+    }
+    else if(window.location.href.indexOf("/users/user-documents/") > -1)
+    {
+        $('.headerTitle').text('My Documents');
+    }
+    else if(window.location.href.indexOf("/users/user-colleges/") > -1)
+    {
+        $('.headerTitle').text('My Colleges');
+    }
+
+ 
+})
+
+$(".footer-logo").click(function(){
+    window.location.href = "/";
+});
+
+ mediaBaseURL =  'https://cdekho-mum-2020.s3.ap-south-1.amazonaws.com/media/';
+ 
+   debug = false;
+   
+var downloadTimer;
+var downloadTimerReset;
+var phone_no_val;
+var parentPopup;
+var questionTitle;
+var reloadOnLogin = true;
+var reloadOnSignup = true;
+var isLoggedIn = parseInt($('#is-logged-in').val());
+</script><script>
+    var folders = {}
+        $('.course_list').each(function (key, row) {
+            var data_set = $(row).data()
+            $.each(data_set, function (folder, comb) {
+                comb = String(comb)
+                if (comb) {
+                    var values = comb.split(' ~ ')
+                    $.each(values, function (key, value) {
+                        if (!$.isArray(folders[folder])) {
+                            folders[folder] = []
+                            folders[folder].push(value.trim())
+
+                        } else if (folders[folder].indexOf(value.trim()) <= -1) {
+                            folders[folder].push(value.trim())
+                        }
+                    })
+                }
+            })
+        })
+        $.each(folders, function (folder, values) {
+            $('#filtersModalBody').append(folder_template(folder, values))
+        })
+
+        function folder_template(folder, list) {
+
+            var html = '<div class="filter-list-container clearfix" id="' + folder + '">' +
+                '<div class="filter-option ripplelink filterClose"> ' + capitalizeFirstLetter(folder) + ' <span class="icon"></span></div><div class="filter-deta-outer"> '
+            if (folder == 'degree') {
+                html = html + '<input type="text" class="form-control ser_bx" placeholder="Search" onkeyup="filterFunction(' + folder + ')">'
+            }
+            html = html + '<ul class="filter-option-list">'
+            $.each(list, function (ke, row) {
+                html = html + '<li class="filter_button"><label class="gs_control  gs_checkbox "><i>' + capitalizeFirstLetter(row) + '</i><input class="filter-input" value="' + row + '" ' +
+                    'type="checkbox"><span class="gs_control__indicator"></span></label></li>'
+            })
+            html + '</ul></div></div>'
+            return html
+        }
+
+        var applied_filters = []
+        $(document).on('click', '.filter-input', function () {
+            if ($(this).data('folder') == 'Streams') {
+                window.location.href = $(this).data('list_url')
+                return true
+            }
+            var checkbox = $(this)
+            var folder = $(this).parents('.filter-list-container').attr('id')
+            var class_name = hash_genrator($(checkbox).val())
+            if ($(this).is(":checked")) {
+                if (!$.isArray(applied_filters[folder])) {
+                    applied_filters[folder] = []
+                    applied_filters[folder].push($(checkbox).val())
+                    $('.filterLinks').append('<li class="' + class_name + '"><a href="javascript:void(0)">' + $(checkbox).val() + '</a></li>')
+                } else if (applied_filters[folder].indexOf($(checkbox).val())) {
+                    applied_filters[folder].push($(checkbox).val())
+                    $('.filterLinks').append('<li class="' + class_name + '"><a href="javascript:void(0)">' + $(checkbox).val() + '</a></li>')
+                }
+                $(this).addClass('' + class_name)
+            }
+            else {
+                applied_filters[folder].splice(applied_filters[folder].indexOf($(checkbox).val()), 1)
+                $("li." + class_name).remove()
+                $(this).removeClass('' + class_name)
+            }
+
+            updateList(applied_filters)
+        })
+
+        function updateList(ap_filters) {
+
+            $('.course_list').hide()
+            var is_filter_applied = false
+            var filter_string = ''
+            for (var folder in ap_filters) {
+                $.each(ap_filters[folder], function (key, filter) {
+                    is_filter_applied = true
+                    filter_string = filter_string + "[data-" + folder + "*='" + filter + "']"
+                })
+            }
+            $('#course_list_wrapper').find(filter_string).show()
+            if (!is_filter_applied) {
+                $('.course_list').show()
+            }
+            $('#course_count').html($('#course_list_wrapper > .course_list:visible').length);
+        }
+
+        $(document).on('click', '.filterLinks li', function () {
+            var cls_name = $(this).attr('class')
+            if (cls_name == 'stream') {
+                window.location.href = '/test-preparation/'
+            }
+            else {
+                $('input.' + cls_name).trigger('click')
+            }
+        })
+
+       
+            $('.filterBtn').click(function() {
+
+                $('#filtersModal').fadeIn('slow');
+
+
+            });
+
+            $('.close').click(function() {
+
+                $('#filtersModal').fadeOut('slow');
+
+            });
+
+
+        function hash_genrator(string) {
+            return string.split("").reduce(function (a, b) {
+                a = ((a << 5) - a) + b.charCodeAt(0);
+                return a & a
+            }, 0);
+        }
+
+        function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+
+            
+
+            $(document).on('click', '.course_follow', function () {
+                
+                get_login_modal(this)
+            
+        })
+
+        if ($(window).width() <= 768) {
+                $('#filtersModalBody > div').first('.filter-list-container').addClass('selected');
+                $(document).on("touchstart click", "#filtersModal .filter-list-container .filter-option", function () {
+                    $(".filter-list-container").removeClass("selected"), $(this).parent().addClass("selected"), $(".filter-deta-outer").hide(), $(this).parent().find(".filter-deta-outer").show()
+                });
+            } else {
+                $(document).on('click',".filter-list-container .filter-option",function () {
+                    $(this).toggleClass("filterClose");
+                    $(this).siblings().slideToggle();
+                });
+            }
+            $('#filtersModal .close,#submit_filters').on("touchstart click", function () {
+                $('#filtersModal').slideUp();
+                $('body').removeClass('overflowHide');
+            });
+
+    </script><link rel="stylesheet" href="https://static.collegedekho.com/static/css/select2.min.138258aaab4e.css" type="text/css"></body></html>
