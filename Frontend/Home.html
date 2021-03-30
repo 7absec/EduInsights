@@ -5,6 +5,43 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+  <style>
+    .dropbtn {
+      color: white;
+      padding-top: 17px;
+      padding-left:2px;
+      padding-right:2px;
+      border: none;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown-content a:hover {background-color: #ddd;}
+    
+    .dropdown:hover .dropdown-content {display: block;}
+    
+    .dropdown:hover .dropbtn {background-color: #6F2232;}
+    </style>
+    
 
   <!---bootstrap header-->
     <!--quizes hasder-->
@@ -63,13 +100,21 @@
             <a class="nav-link" href="#">CareerCounselling</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="socialawareness.html">Social Awareness</a>
+            <div class="dropdown">
+              <button class="dropbtn">Social Awareness</button>
+              <div class="dropdown-content">
+                <a href="achiverments.html">Achivements</a>
+                <a href="#">Acceptance</a>
+                <a href="donndont.html">dos and Donts</a>
+              </div>
+            </div>
+            
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="travelling.html">Travelling</a>
+            <a class="nav-link" href="travell.html">Travelling</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Ask Me</a>
+            <a class="nav-link" href="askme.html">Ask Me</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">AboutUs</a>
