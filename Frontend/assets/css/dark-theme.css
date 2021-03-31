@@ -3,7 +3,7 @@ body{
 }
 section .content a,
 section .content input{
-    background-color: #f0f0f0;
+    background-color: #13737b;
 }
 section .content h2{
     color: #face3c;
@@ -12,15 +12,15 @@ section .content h2{
     background-color: #6F2232 !important;
 }
 .container-style{
-    background-color: #950740 !important;  
+    background-color: #13737b; !important;  
 }
 .sidebar{
-    background-color: #E3073F;
+    background-color: #13737b;
 }
 
 
 .h2{
-    color: #950740;
+    color: #13737b;
 }
 
 .panel-body{
