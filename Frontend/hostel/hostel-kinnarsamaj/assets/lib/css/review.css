@@ -1,0 +1,21 @@
+.animated {
+    -webkit-transition: height .2s;
+    -moz-transition: height .2s;
+    transition: height .2s
+}
+
+.stars {
+    font-size: 22px;
+    color: #ae0b0b
+}
+
+textarea.form-control {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0
+}
+
+.well.well-sm {
+    border-radius: 0;
+    box-shadow: none
+}

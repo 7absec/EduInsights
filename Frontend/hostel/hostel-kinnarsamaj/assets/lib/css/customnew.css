@@ -1,0 +1,619 @@
+.bestdeal input {
+    border-width: 1px;
+    border-radius: 0
+}
+
+#post-review-box input {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0
+}
+
+#txtReview {
+    width: 370px
+}
+
+@media (min-width:768px) and (max-width :968px) {
+    .glyphicon {
+        font-size: 17px
+    }
+}
+
+.green {
+    border: 1px solid #f2f2f2;
+    background: #ffe066
+}
+
+.green:hover {
+    border: 1px solid #fff;
+    background: #ffcc00;
+    cursor: pointer;
+    border-radius: 0px
+}
+
+div.green {
+    width: 20%;
+    height: 60px;
+    text-align: center;
+    -webkit-transition: all 1s
+}
+
+table#tabdata i.fa.fa-mobile {
+    float: left;
+    width: 26px;
+    display: block
+}
+
+.stars {
+    font-size: 22px;
+    color: #ff7519
+}
+
+.comname {
+    margin-bottom: 5px;
+    font-size: 18px
+}
+
+li.comname .fa.fa-envelope.inncolorft,
+li.comname .fa.fa-link.inncolorft,
+li.comname .fa.fa-mobile.inncolorft,
+li.comname .fa.fa-phone.inncolorft,
+li.comname .fa.fa-user.inncolorft {
+    float: left;
+    width: 26px;
+    display: block;
+    height: 16px
+}
+
+#txtCityName {
+    height: 30px;
+    margin-top: 1px;
+    border-radius: 0;
+    padding-right: 0 !important
+}
+
+#advances1 input,
+div#advances input {
+    font-size: 20px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    color: #fff !important
+}
+
+.pthing {
+    font-size: 18px;
+    color: #000;
+    border-bottom: 1px dashed #f2f2f2
+}
+
+@media (max-width:600px) {
+    .image_company {
+        max-width: 215px
+    }
+}
+
+.image_company {
+    max-width: 254px;
+    height: auto;
+    border: 1px solid #000000;
+    padding: 4px
+}
+
+.hiverified {
+    width: 110px;
+    height: 45px;
+    margin-top: 7px
+}
+
+#advances1 input,
+#search_boxx input,
+#textbox input,
+div#advances input {
+    border-style: none
+}
+
+.activehome {
+    color: #ff3333 !important
+}
+
+#logo_demos {
+    height: 170px;
+    max-width: 170px;
+    border: 1px solid #eee;
+    padding: 3px;
+    background: 0 0
+}
+
+.hrsearchresulttext {
+    margin-bottom: 5px !important
+}
+
+#chat_window_1 .top-bar {
+    background: black !important;
+    color: #fff !important;
+    padding: 10px;
+    position: relative;
+    overflow: hidden
+}
+
+#chat_window_1 #btnSend {
+    background-color: #FF0000 !important;
+    font-size: 20px !important;
+    border: none !important
+}
+
+#chat_window_1 {
+    bottom: 0;
+    z-index: 11;
+    PADDING: 0;
+    margin: 0;
+    width: 100%;
+}
+
+div#caddress.imagefoot div img {
+    width: 194px;
+    height: auto;
+    margin-top: 9px
+}
+
+div#caddress.imagefoot {
+    text-align: center
+}
+
+#divPopularCity ul {
+    padding-left: 0;
+    padding-bottom: 0;
+    margin-bottom: 0
+}
+
+#divPopularCity ul li {
+    height: 40px;
+    font-size: 23px;
+    font-family: calibri, Arial, Helvetica, sans-serif;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px
+}
+
+#divPopularCity ul li a {
+    color: #000 !important;
+    display: block;
+    width: 100%
+}
+
+#divPopularCity {
+    width: 80%;
+    position: absolute;
+    top: 31px;
+    left: 20%;
+    border: 1px solid;
+    z-index: 10;
+    background: #fff;
+    display: none
+}
+
+#divPopularCity ul li:hover {
+    background: #EEE
+}
+
+#divwidth,
+#divwidth div {
+    width: 150px !important
+}
+
+.completionList {
+    border: 1px solid #444;
+    margin: 0;
+    padding: 2px 2px 2px 5px;
+    max-height: 220px;
+    height: auto;
+    overflow: auto;
+    background-color: #FFF
+}
+
+.listItem {
+    color: #1C1C1C;
+    padding: 3px 0;
+    font-size: 20px
+}
+
+.itemHighlighted {
+    background-color: #EEE;
+    padding: 3px 0;
+    font-size: 20px
+}
+
+#dicompany,
+#searchControl_txtCityName {
+    height: 30px;
+    margin-top: 1px;
+    border-radius: 0;
+    padding-right: 0 !important
+}
+
+#divcity {
+    width: 213px !important
+}
+
+#dicompany {
+    max-height: 250px !important;
+    height: 250px
+}
+
+.logodemo {
+    height: 170px;
+    max-width: 170px;
+    padding: 3px;
+    background: 0 0
+}
+
+.header .logodemo,
+.inncolorbg.header1 .logodemo,
+.inncolorbg.header2 .logodemo {
+    height: 134px;
+    max-width: auto
+}
+
+.form-inline.advancesaerchinner {
+    text-align: center
+}
+
+.form-inline.advancesaerchinner span.caret {
+    margin: 4px -2px
+}
+
+.form-inline.advancesaerchinner .input-group-addon {
+    border-radius: 0
+}
+
+.cmn-t-pulse {
+    color: #ff3333;
+    font-size: 22px
+}
+
+.descriptiontitle {
+    width: 100%;
+    display: block;
+    padding: 6px 0;
+    border: solid;
+    border-radius: 12px;
+    border-color: white
+}
+
+div#callus2 #number {
+    color: #ff3333;
+    font-size: 16px
+}
+
+h1#result_result {
+    font-size: 16px
+}
+
+#blurbox-wrapper {
+    background: 0 0 !important
+}
+
+.overlay {
+    height: 15000px;
+    position: absolute;
+    display: none;
+    background-color: rgba(0, 0, 0, .7);
+    top: 0;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    right: 0
+}
+
+header#tabnav h1 {
+    text-align: center;
+    font-size: 30px
+}
+
+#headers h1 {
+    color: white;
+    text-shadow: 1px 1px black
+}
+
+#chat_window_1 #btnCancel {
+    background-color: #ff7519 !important;
+    font-size: 20px !important;
+    border: none !important
+}
+
+#dicompany b {
+    font-size: 20px
+}
+
+.paddingleft0 {
+    padding-left: 0 !important
+}
+
+.textalignleft {
+    text-align: left !important
+}
+
+.displaynone {
+    display: none
+}
+
+.width100per {
+    width: 100% !important
+}
+
+.pointereventnone {
+    pointer-events: none
+}
+
+.companylistpagediv {
+    overflow: hidden;
+    float: right
+}
+
+.margintop10 {
+    margin-top: 10px !important
+}
+
+.textalignright {
+    text-align: right !important
+}
+
+.margintop5 {
+    margin-left: 5px !important
+}
+
+.companylistcancel {
+    color: #fff !important;
+    padding: 6px 12px !important;
+    margin-left: 5px
+}
+
+.companylistsend {
+    color: #fff !important;
+    padding: 6px 12px !important
+}
+
+.marqueeheight {
+    height: 212px !important
+}
+
+.divMap {
+    width: 100%;
+    height: 220px
+}
+
+.completionList {
+    border: solid 1px #444;
+    margin: 0;
+    padding: 2px;
+    max-height: 220px;
+    height: auto;
+    overflow: auto;
+    background-color: #FFF;
+    padding-left: 5px
+}
+
+.listItem {
+    color: #1C1C1C;
+    padding: 3px 0;
+    font-size: 20px
+}
+
+.itemHighlighted {
+    background-color: #EEE;
+    padding: 3px 0;
+    font-size: 20px
+}
+
+.center {
+    text-align: center !important
+}
+
+.bestdealSubmit {
+    padding: 6px 12px !important
+}
+
+.bestdealCancel {
+    padding: 6px 12px !important;
+    margin-left: 5px
+}
+
+.whitefont {
+    color: #fff !important
+}
+
+.font18 {
+    font-size: 18px !important
+}
+
+.productId {
+    height: 320px;
+    max-height: 320px;
+    text-align: left !important
+}
+
+.searchtext {
+    font-size: 21px !important;
+    color: #000 !important;
+    width: 615px !important
+}
+
+.margin0 {
+    margin: 0 !important
+}
+
+.paddingright10 {
+    padding-right: 10px !important
+}
+
+.height34 {
+    height: 34px !important
+}
+
+.normallabel {
+    font-weight: normal;
+}
+
+#catchdrop {
+    position: relative;
+}
+
+div#chat_window_1 .col-md-12 {
+    padding: 0px;
+}
+
+.chat li.left .chat-body {
+    margin-left: 108px;
+}
+
+@media (max-width: 600px) {
+    div.green {
+        width: 50%;
+        height: 60px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 965px) and (min-width: 600px) {
+    .stars {
+        font-size: 16px;
+    }
+    #best_deal,
+    .belowlines {
+        font-size: 18px;
+    }
+    .hiverified {
+        width: 83px !important;
+        height: 37px !important;
+        margin-top: 11px !important;
+    }
+    .image_company {
+        max-width: 170px;
+    }
+}
+
+#comdeals {
+    clear: both;
+}
+
+.rel_cat {
+    margin-top: 0px;
+    background: #e60000;
+    color: #fff;
+    font-size: 17px;
+    padding: 4px 2px;
+    margin-bottom: 5px;
+}
+
+.hrlist2 {
+    border: 1px solid #ff3333;
+}
+
+div.hrlist2 .triangle-down {
+    top: 54px;
+    border-top-color: #ff3333;
+    left: 15px;
+    margin: 0;
+}
+
+div.hrcomlist {
+    padding-right: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input.btn.btn-primary.btn-lg.adview {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+input[type="button"].adview {
+    color: white !important;
+    -webkit-appearance: none;
+    -webkit-user-select: none;
+    align-items: flex-start;
+    background-color: rgba(255, 51, 51, 1);
+    background-image: none;
+    border-bottom-color: rgba(255, 51, 51, 1);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0px;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+    font-family: calibri, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 45px;
+    letter-spacing: normal;
+    line-height: 23.9400005340576px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    overflow-x: visible;
+    overflow-y: visible;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 10px;
+    text-align: center;
+    text-indent: 0px;
+    text-rendering: auto;
+    text-shadow: none;
+    text-transform: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 365.828125px;
+    word-spacing: 0px;
+    writing-mode: lr-tb;
+    -webkit-writing-mode: horizontal-tb;
+}
+
+.gridstyleCenter {
+    text-align: center !important;
+}
+
+.carousel-inner .item img {
+    max-height: 203px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.item .thumb img {
+    width: 100% !important;
+    margin: 2px !important;
+}
+
+#lbViewMore:hover {
+    color: #ff7519 !important;
+}
+
+.addCatelogmargin input[type=radio],
+.addCatelogmargin input[type=checkbox] {
+    margin: 4px 10px 0;
+}
+
+.btnOrange:hover {
+    background-color: #ff3333 !important;
+    border-color: #ff3333 !important;
+}
